@@ -59,6 +59,12 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 As we can observe, the data is imbalanced. It will be great to balance the dataset so that the network can avoid skewed learning towards classes that have more data. There are 2 common ways you can mitigate this problem:
 
+**Undersampling**, ramdomly resample some of the observations from the majority class in order to match the numbers with the menority class.
+
+**Oversampling**, generating data augmentation such as random scaling, cropping, rotation, etc.
+
+In this case and despite the data for the model is small, we are not generating data augmentation since model is training pretty well, and validation suggest that not significantly marginal benefit will comoe out from this. However, for most robust models, it would be required.
+
 
 ![alt text][image6]
 
@@ -76,8 +82,6 @@ Normalization is choosen over standardization since normalization is good to use
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
-
-I decided not to proceed with more processing or data augmentation since images in real life are very close to the data set, and adding more noise/perspective transformation in this particular ocasion would not significantly benefit our simple classification model.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
